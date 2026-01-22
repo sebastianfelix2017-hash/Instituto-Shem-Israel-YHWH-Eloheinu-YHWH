@@ -3,56 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHEMÁ ISRAEL - Instituto Bíblico de Formación Apostólica</title>
+    <title>INSTITUTO BÍBLICO - SHEMÁ ISRAEL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); overflow-y: auto; }
-        .modal-content { background-color: white; margin: 5% auto; padding: 30px; border-radius: 20px; width: 90%; max-width: 700px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        .modal { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); overflow-y: auto; }
+        .modal-content { background-color: white; margin: 5% auto; padding: 25px; border-radius: 15px; width: 90%; max-width: 600px; position: relative; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="bg-slate-50 text-slate-900">
 
     <header class="bg-white shadow-md border-b sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div>
-                <h1 class="text-2xl font-black text-blue-900 leading-tight tracking-tighter">SHEMÁ ISRAEL</h1>
-                <p class="text-[10px] tracking-[0.3em] font-bold text-blue-600 uppercase italic">YHWH ELOEINU YHWH EJAD</p>
+                <h1 class="text-xl md:text-2xl font-black text-blue-900 leading-tight">SHEMÁ ISRAEL</h1>
+                <p class="text-[9px] tracking-[0.2em] font-bold text-blue-600 uppercase">YHWH ELOEINU YHWH EJAD</p>
             </div>
-            <div class="flex flex-col items-end">
-                <a href="https://wa.me/528138624112" class="text-green-600 font-black flex items-center hover:scale-105 transition">
-                    <i class="fab fa-whatsapp mr-2 text-xl"></i> 8138624112
-                </a>
-                <span class="text-[9px] text-slate-400 font-bold uppercase">Hno. Sebastián Félix</span>
-            </div>
+            <a href="https://wa.me/528138624112" class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center shadow-lg">
+                <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+            </a>
         </div>
     </header>
 
-    <section class="relative py-20 bg-blue-900 text-white text-center overflow-hidden">
-        <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-4xl md:text-6xl font-serif italic mb-6">"Oye, Israel: El Señor nuestro Dios, el Señor uno es"</h2>
-            <p class="text-xl text-blue-200 max-w-3xl mx-auto font-light leading-relaxed mb-10">
-                No te conformes con tradiciones de hombres. Regresa a la senda antigua, a la doctrina de los apóstoles y al poder del Nombre que es sobre todo nombre.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#estudios" class="bg-white text-blue-900 px-8 py-4 rounded-full font-black shadow-xl hover:bg-blue-50 transition uppercase tracking-widest text-sm">Explorar Estudios</a>
-                <a href="#inscripcion" class="bg-amber-500 text-white px-8 py-4 rounded-full font-black shadow-xl hover:bg-amber-600 transition uppercase tracking-widest text-sm italic">Inscripciones 2026</a>
+    <section class="py-16 bg-blue-900 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-serif italic mb-6">"Oye, Israel: El Señor nuestro Dios, el Señor uno es"</h2>
+            <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">Regresa a la doctrina de los apóstoles y al poder del Nombre que es sobre todo nombre.</p>
+            <a href="#inscripcion" class="bg-amber-500 text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl">Inscribirme ahora</a>
+        </div>
+    </section>
+
+    <section id="estudios" class="py-16 container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-blue-900 text-center">
+                <h3 class="text-xl font-black mb-4 uppercase">La Unicidad</h3>
+                <p class="text-slate-600 mb-6 italic">¿Es Dios una trinidad o es Uno?</p>
+                <button onclick="openModal('m1')" class="w-full bg-blue-900 text-white py-3 rounded-xl font-bold">ABRIR ESTUDIO</button>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-amber-500 text-center">
+                <h3 class="text-xl font-black mb-4 uppercase">El Nombre</h3>
+                <p class="text-slate-600 mb-6 italic">El misterio revelado en Jesús.</p>
+                <button onclick="openModal('m2')" class="w-full bg-amber-500 text-white py-3 rounded-xl font-bold">ABRIR ESTUDIO</button>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-emerald-500 text-center">
+                <h3 class="text-xl font-black mb-4 uppercase">El Bautismo</h3>
+                <p class="text-slate-600 mb-6 italic">La llave de Hechos 2:38.</p>
+                <button onclick="openModal('m3')" class="w-full bg-emerald-600 text-white py-3 rounded-xl font-bold">ABRIR ESTUDIO</button>
             </div>
         </div>
     </section>
 
-    <section id="estudios" class="py-20 container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-blue-900 uppercase tracking-tighter">Fundamentos de la Fe Apostólica</h2>
-            <p class="text-slate-500 mt-2 italic">Haz clic en cada tema para profundizar en la Palabra</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="bg-white p-8 rounded-3xl shadow-xl border-b-8 border-blue-900 hover:-translate-y-2 transition-transform cursor-pointer" onclick="openModal('modal1')">
-                <div class="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                    <i class="fas fa-hand-pointer text-blue-900 text-2xl"></i>
+    <section id="inscripcion" class="py-16 bg-slate-100">
+        <div class="container mx-auto px-6 max-w-xl bg-white p-8 md:p-12 rounded-3xl shadow-2xl">
+            <h3 class="text-2xl font-black text-center text-blue-900 mb-8 uppercase tracking-tighter">Inscripción a Talleres Online</h3>
+            <form action="https://formspree.io/f/xvgzlowz" method="POST" class="space-y-6">
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Nombre del Estudiante</label>
+                    <input type="text" name="Nombre" required class="w-full border-b-2 border-slate-200 p-3 outline-none focus:border-blue-900 transition">
                 </div>
-                <h3 class="text-2xl font-black text-slate-800 mb-4">La Unicidad de Dios</h3>
-                <p class="text-slate-600 mb-6 leading-relaxed">Descubre por qué Dios no es una trinidad, sino un solo ser manifestado para nuestra salvación.</p>
-                <span class="text-blue-600 font-bold uppercase text-sm tracking-widest">Leer Estudio →</span>
-            </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-2">WhatsApp</label>
+                    <input type="tel" name="WhatsApp" required class="w-full border-b-2 border-slate-200 p-3 outline-none focus:border-blue-900 transition" placeholder="8138624112">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Taller de Interés</label>
+                    <select name="Curso" class="w-full border-b-2 border-slate-200 p-3 outline-none bg-white">
+                        <option>Unicidad de Dios</option>
+                        <option>Bautismo Bíblico</option>
+                        <option>Homilética (Predicación)</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-blue-900 text-white py-4 rounded-2xl font-black text-lg shadow-xl uppercase">Enviar Datos</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="m1" class="modal"><div class="modal-content text-lg">
+        <h2 class="text-2xl font-black text-blue-900 mb-4 border-b pb-2">LA UNICIDAD DE DIOS</h2>
+        <p class="mb-4">La Biblia declara: <strong>"Oye, Israel: el SEÑOR nuestro Dios, el SEÑOR uno es"</strong> (Deut. 6:4). Dios no es una trinidad de personas. Él es un Espíritu absoluto que se manifestó en carne.</p>
+        <p class="mb-4">Jesús dijo: <em>"Yo y el Padre uno somos"</em> (Juan 10:30). No son dos, es el mismo Dios invisible haciéndose visible para salvarnos.</p>
+        <button onclick="closeModal('m1')" class="w-full bg-red-500 text-white py-2 rounded-lg font-bold mt-4 uppercase">Cerrar</button>
+    </div></div>
+
+    <div id="m2" class="modal"><div class="modal-content text-lg">
+        <h2 class="text-2xl font-black text-amber-600 mb-4 border-b pb-2">EL NOMBRE DE DIOS</h2>
+        <p class="mb-4">El nombre del Padre, del Hijo y del Espíritu Santo es <strong>JESÚS</strong>. Los apóstoles no bautizaron en títulos, bautizaron en el Nombre.</p>
+        <p class="mb-4 italic">"Y en ningún otro hay salvación; porque no hay otro nombre bajo el cielo, dado a los hombres, en que podamos ser salvos" (Hechos 4:12).</p>
+        <button onclick="closeModal('m2')" class="w-full bg-red-500 text-white py-2 rounded-lg font-bold mt-4 uppercase">Cerrar</button>
+    </div></div>
+
+    <div id="m3" class="modal"><div class="modal-content text-lg">
+        <h2 class="text-2xl font-black text-emerald-600 mb-4 border-b pb-2">EL BAUTISMO BÍBLICO</h2>
+        <p class="mb-4">El bautismo debe ser por inmersión y <strong>en el nombre de Jesucristo</strong>. Esta es la llave que Pedro usó en el día de Pentecostés.</p>
+        <p class="mb-4 font-bold">Hechos 2:38: "Arrepentíos, y bautícese cada uno de vosotros en el nombre de Jesucristo para perdón de los pecados..."</p>
+        <button onclick="closeModal('m3')" class="w-full bg-red-500 text-white py-2 rounded-lg font-bold mt-4 uppercase">Cerrar</button>
+    </div></div>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+        window.onclick = function(event) { if (event.target.className === 'modal') { closeModal(event.target.id); } }
+    </script>
+
+</body>
+</html>
