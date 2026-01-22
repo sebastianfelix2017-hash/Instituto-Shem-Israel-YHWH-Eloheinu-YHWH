@@ -6,103 +6,133 @@
     <title>INSTITUTO BÍBLICO - SHEMÁ ISRAEL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .modal { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); overflow-y: auto; }
-        .modal-content { background-color: white; margin: 5% auto; padding: 25px; border-radius: 15px; width: 90%; max-width: 600px; position: relative; }
-    </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-900 font-sans">
 
     <header class="bg-white shadow-md border-b sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div>
                 <h1 class="text-xl md:text-2xl font-black text-blue-900 leading-tight">SHEMÁ ISRAEL</h1>
-                <p class="text-[9px] tracking-[0.2em] font-bold text-blue-600 uppercase">YHWH ELOEINU YHWH EJAD</p>
+                <p class="text-[9px] tracking-[0.2em] font-bold text-blue-600 uppercase italic">YHWH ELOEINU YHWH EJAD</p>
             </div>
-            <a href="https://wa.me/528138624112" class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center shadow-lg">
-                <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+            <a href="https://wa.me/528138624112" class="bg-green-600 text-white px-5 py-2 rounded-full font-bold flex items-center shadow-lg hover:bg-green-700 transition">
+                <i class="fab fa-whatsapp mr-2 text-xl"></i> WhatsApp
             </a>
         </div>
     </header>
 
-    <section class="py-16 bg-blue-900 text-white text-center">
+    <section class="bg-blue-900 text-white py-16 text-center">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-serif italic mb-6">"Oye, Israel: El Señor nuestro Dios, el Señor uno es"</h2>
-            <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">Regresa a la doctrina de los apóstoles y al poder del Nombre que es sobre todo nombre.</p>
-            <a href="#inscripcion" class="bg-amber-500 text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl">Inscribirme ahora</a>
+            <h2 class="text-3xl md:text-5xl font-serif italic mb-6">Regresa a la Senda Antigua</h2>
+            <p class="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                No sigas dogmas de concilios humanos. Descubre la verdad revelada a los apóstoles sobre la deidad de Jesucristo y el plan de salvación bíblico.
+            </p>
         </div>
     </section>
 
-    <section id="estudios" class="py-16 container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-blue-900 text-center">
-                <h3 class="text-xl font-black mb-4 uppercase">La Unicidad</h3>
-                <p class="text-slate-600 mb-6 italic">¿Es Dios una trinidad o es Uno?</p>
-                <button onclick="openModal('m1')" class="w-full bg-blue-900 text-white py-3 rounded-xl font-bold">ABRIR ESTUDIO</button>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-amber-500 text-center">
-                <h3 class="text-xl font-black mb-4 uppercase">El Nombre</h3>
-                <p class="text-slate-600 mb-6 italic">El misterio revelado en Jesús.</p>
-                <button onclick="openModal('m2')" class="w-full bg-amber-500 text-white py-3 rounded-xl font-bold">ABRIR ESTUDIO</button>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-8 border-emerald-500 text-center">
-                <h3 class="text-xl font-black mb-4 uppercase">El Bautismo</h3>
-                <p class="text-slate-600 mb-6 italic">La llave de Hechos 2:38.</p>
-                <button onclick="openModal('m3')" class="w-full bg-emerald-600 text-white py-3 rounded-xl font-bold">ABRIR ESTUDIO</button>
-            </div>
+    <section class="py-16 container mx-auto px-6">
+        <h2 class="text-3xl font-black text-blue-900 mb-10 text-center uppercase tracking-tighter">Estudios Profundos</h2>
+        
+        <div class="max-w-4xl mx-auto space-y-6">
+            
+            <article class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+                <button onclick="toggleStudy('estudio1')" class="w-full flex justify-between items-center p-8 bg-blue-50 hover:bg-blue-100 transition">
+                    <span class="text-xl md:text-2xl font-black text-blue-900 uppercase tracking-tight text-left">1. La Unicidad de Dios (No es Trinidad)</span>
+                    <i class="fas fa-chevron-down text-blue-900"></i>
+                </button>
+                <div id="estudio1" class="hidden p-8 border-t border-slate-100 bg-white prose max-w-none text-slate-700">
+                    <p class="mb-4"><strong>La Deidad Revelada:</strong> El primer mandamiento de toda la Biblia es el Shemá: <em>"Oye, Israel: el SEÑOR nuestro Dios, el SEÑOR uno es"</em> (Deuteronomio 6:4). La palabra "Uno" aquí es <strong>Ejad</strong>, que significa una unidad absoluta.</p>
+                    <p class="mb-4">Dios es Espíritu (Juan 4:24), y por lo tanto es invisible e omnipresente. La doctrina de la "Trinidad" (tres personas distintas) fue una invención del Concilio de Nicea en el año 325 d.C., pero los apóstoles nunca predicaron tal cosa. Ellos creían que Dios es <strong>Uno solo</strong> que se manifestó de diferentes formas:</p>
+                    <ul class="list-disc pl-6 mb-6">
+                        <li><strong>Como Padre:</strong> En Su relación como Creador y fuente de vida.</li>
+                        <li><strong>Como Hijo:</strong> Cuando ese mismo Dios se vistió de carne (1 Timoteo 3:16) para poder morir, pues el Espíritu no puede morir. Jesús no es la "segunda persona", es <strong>DIOS MISMO</strong> manifestado en carne.</li>
+                        <li><strong>Como Espíritu Santo:</strong> Es Dios mismo obrando y morando dentro del corazón del creyente.</li>
+                    </ul>
+                    <p class="bg-blue-900 text-white p-6 rounded-2xl italic font-bold">
+                        "Yo y el Padre uno somos" (Juan 10:30). Jesús no dijo que eran un equipo, dijo que Él era el mismo Padre revelado a los hombres.
+                    </p>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+                <button onclick="toggleStudy('estudio2')" class="w-full flex justify-between items-center p-8 bg-amber-50 hover:bg-amber-100 transition">
+                    <span class="text-xl md:text-2xl font-black text-amber-900 uppercase tracking-tight text-left">2. El Misterio del Nombre de Dios</span>
+                    <i class="fas fa-chevron-down text-amber-900"></i>
+                </button>
+                <div id="estudio2" class="hidden p-8 border-t border-slate-100 bg-white text-slate-700 leading-relaxed">
+                    <p class="mb-4 font-bold text-lg">¿Cuál es el nombre del Padre, del Hijo y del Espíritu Santo?</p>
+                    <p class="mb-4">Mucha gente repite títulos, pero los títulos no son nombres. El "Padre" es un título, el "Hijo" es un título y el "Espíritu Santo" es un título. Sin embargo, Mateo 28:19 dice que bauticemos en el <strong>NOMBRE</strong> (singular).</p>
+                    <p class="mb-4 text-justify">Cuando los apóstoles recibieron el Espíritu Santo en Pentecostés, Pedro reveló ese Nombre: <strong>JESÚS (Jesucristo)</strong>. El nombre Jesús significa "YHWH es Salvación". Es el nombre que resume toda la deidad y toda la autoridad.</p>
+                    <p class="mb-4"><strong>Hechos 4:12</strong> declara con autoridad: <em>"Y en ningún otro hay salvación; porque no hay otro nombre bajo el cielo, dado a los hombres, en que podamos ser salvos."</em> Si el nombre es vital para la salvación, ¿por qué seguir usando títulos vacíos?</p>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+                <button onclick="toggleStudy('estudio3')" class="w-full flex justify-between items-center p-8 bg-emerald-50 hover:bg-emerald-100 transition">
+                    <span class="text-xl md:text-2xl font-black text-emerald-900 uppercase tracking-tight text-left">3. Bautismo en el Nombre de Jesucristo</span>
+                    <i class="fas fa-chevron-down text-emerald-900"></i>
+                </button>
+                <div id="estudio3" class="hidden p-8 border-t border-slate-100 bg-white text-slate-700 leading-relaxed">
+                    <p class="mb-4 italic border-l-4 border-emerald-500 pl-4">"Arrepentíos, y bautícese cada uno de vosotros en el nombre de Jesucristo para perdón de los pecados..." (Hechos 2:38)</p>
+                    <p class="mb-4">El bautismo no es una "opción", es un mandamiento. Pero no cualquier bautismo es válido. El bautismo bíblico debe cumplir dos condiciones:</p>
+                    <ol class="list-decimal pl-6 mb-6 space-y-2">
+                        <li><strong>Modo:</strong> Por inmersión (sepultura), simbolizando que el viejo hombre muere.</li>
+                        <li><strong>Fórmula:</strong> Debe ser invocado el nombre de <strong>JESUCRISTO</strong>.</li>
+                    </ol>
+                    <p class="mb-4">En todo el libro de Hechos (la historia de la iglesia primitiva), <strong>jamás</strong> se bautizó a nadie mencionando los títulos "Padre, Hijo y Espíritu Santo". Siempre se invocó el nombre de Jesús (Hechos 8:16, Hechos 10:48, Hechos 19:5). Si los apóstoles, que caminaron con Jesús, lo hicieron así, ¿quiénes somos nosotros para cambiarlo?</p>
+                </div>
+            </article>
+
         </div>
     </section>
 
-    <section id="inscripcion" class="py-16 bg-slate-100">
-        <div class="container mx-auto px-6 max-w-xl bg-white p-8 md:p-12 rounded-3xl shadow-2xl">
-            <h3 class="text-2xl font-black text-center text-blue-900 mb-8 uppercase tracking-tighter">Inscripción a Talleres Online</h3>
+    <section id="inscripcion" class="py-20 bg-blue-900">
+        <div class="container mx-auto px-6 max-w-2xl bg-white p-10 rounded-[2rem] shadow-2xl">
+            <h3 class="text-2xl font-black text-blue-900 mb-8 text-center uppercase">Inscripción a Talleres Online</h3>
+            <p class="text-center text-slate-500 mb-8">Únete a nuestras clases por Zoom para profundizar en estos temas.</p>
+            
             <form action="https://formspree.io/f/xvgzlowz" method="POST" class="space-y-6">
                 <div>
-                    <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Nombre del Estudiante</label>
-                    <input type="text" name="Nombre" required class="w-full border-b-2 border-slate-200 p-3 outline-none focus:border-blue-900 transition">
+                    <label class="block text-xs font-black text-slate-400 mb-2 uppercase">Tu Nombre Completo</label>
+                    <input type="text" name="Nombre" required class="w-full bg-slate-50 border-b-2 border-slate-200 p-4 focus:border-blue-900 outline-none transition">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-slate-400 uppercase mb-2">WhatsApp</label>
-                    <input type="tel" name="WhatsApp" required class="w-full border-b-2 border-slate-200 p-3 outline-none focus:border-blue-900 transition" placeholder="8138624112">
+                    <label class="block text-xs font-black text-slate-400 mb-2 uppercase">WhatsApp (8138624112)</label>
+                    <input type="tel" name="WhatsApp" required class="w-full bg-slate-50 border-b-2 border-slate-200 p-4 focus:border-blue-900 outline-none transition">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-slate-400 uppercase mb-2">Taller de Interés</label>
-                    <select name="Curso" class="w-full border-b-2 border-slate-200 p-3 outline-none bg-white">
-                        <option>Unicidad de Dios</option>
+                    <label class="block text-xs font-black text-slate-400 mb-2 uppercase">Materia a Cursar</label>
+                    <select name="Materia" class="w-full bg-slate-50 border-b-2 border-slate-200 p-4 outline-none">
+                        <option>La Unicidad de Dios</option>
                         <option>Bautismo Bíblico</option>
-                        <option>Homilética (Predicación)</option>
+                        <option>Homilética (Arte de Predicar)</option>
                     </select>
                 </div>
-                <button type="submit" class="w-full bg-blue-900 text-white py-4 rounded-2xl font-black text-lg shadow-xl uppercase">Enviar Datos</button>
+                <button type="submit" class="w-full bg-blue-900 text-white py-5 rounded-2xl font-black text-xl hover:bg-blue-800 transition shadow-xl">
+                    SOLICITAR INGRESO
+                </button>
             </form>
         </div>
     </section>
 
-    <div id="m1" class="modal"><div class="modal-content text-lg">
-        <h2 class="text-2xl font-black text-blue-900 mb-4 border-b pb-2">LA UNICIDAD DE DIOS</h2>
-        <p class="mb-4">La Biblia declara: <strong>"Oye, Israel: el SEÑOR nuestro Dios, el SEÑOR uno es"</strong> (Deut. 6:4). Dios no es una trinidad de personas. Él es un Espíritu absoluto que se manifestó en carne.</p>
-        <p class="mb-4">Jesús dijo: <em>"Yo y el Padre uno somos"</em> (Juan 10:30). No son dos, es el mismo Dios invisible haciéndose visible para salvarnos.</p>
-        <button onclick="closeModal('m1')" class="w-full bg-red-500 text-white py-2 rounded-lg font-bold mt-4 uppercase">Cerrar</button>
-    </div></div>
-
-    <div id="m2" class="modal"><div class="modal-content text-lg">
-        <h2 class="text-2xl font-black text-amber-600 mb-4 border-b pb-2">EL NOMBRE DE DIOS</h2>
-        <p class="mb-4">El nombre del Padre, del Hijo y del Espíritu Santo es <strong>JESÚS</strong>. Los apóstoles no bautizaron en títulos, bautizaron en el Nombre.</p>
-        <p class="mb-4 italic">"Y en ningún otro hay salvación; porque no hay otro nombre bajo el cielo, dado a los hombres, en que podamos ser salvos" (Hechos 4:12).</p>
-        <button onclick="closeModal('m2')" class="w-full bg-red-500 text-white py-2 rounded-lg font-bold mt-4 uppercase">Cerrar</button>
-    </div></div>
-
-    <div id="m3" class="modal"><div class="modal-content text-lg">
-        <h2 class="text-2xl font-black text-emerald-600 mb-4 border-b pb-2">EL BAUTISMO BÍBLICO</h2>
-        <p class="mb-4">El bautismo debe ser por inmersión y <strong>en el nombre de Jesucristo</strong>. Esta es la llave que Pedro usó en el día de Pentecostés.</p>
-        <p class="mb-4 font-bold">Hechos 2:38: "Arrepentíos, y bautícese cada uno de vosotros en el nombre de Jesucristo para perdón de los pecados..."</p>
-        <button onclick="closeModal('m3')" class="w-full bg-red-500 text-white py-2 rounded-lg font-bold mt-4 uppercase">Cerrar</button>
-    </div></div>
+    <footer class="py-12 text-center text-slate-400 text-sm">
+        <p class="font-bold text-blue-900 uppercase tracking-widest mb-2 italic">Shemá Israel YHWH eloeinu YHWH Ejad</p>
+        <p>Instituto Bíblico de Formación Apostólica © 2026</p>
+    </footer>
 
     <script>
-        function openModal(id) { document.getElementById(id).style.display = "block"; }
-        function closeModal(id) { document.getElementById(id).style.display = "none"; }
-        window.onclick = function(event) { if (event.target.className === 'modal') { closeModal(event.target.id); } }
+        function toggleStudy(id) {
+            const study = document.getElementById(id);
+            const icon = study.previousElementSibling.querySelector('i');
+            
+            if (study.classList.contains('hidden')) {
+                study.classList.remove('hidden');
+                icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            } else {
+                study.classList.add('hidden');
+                icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            }
+        }
     </script>
 
 </body>
